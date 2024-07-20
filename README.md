@@ -10,7 +10,7 @@ Update User: Allows you to update the information of an existing user.
 Delete User: Allows you to delete a user profile.
 The service is designed to integrate with databases and other authentication and authorization services.
 
-Requirements
+Requirements: 
 Node.js 
 MongoDB 
 Docker 
