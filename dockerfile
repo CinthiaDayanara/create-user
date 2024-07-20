@@ -11,7 +11,7 @@ RUN npm install
 COPY . .
 
 
-EXPOSE 5000
+EXPOSE 3000
 
 # Comando para iniciar la aplicación
-CMD ["node", "app.js"]
+CMD ["node", "server.js"]
