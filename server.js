@@ -6,11 +6,14 @@ const app = express();
 const port = 3000;
 
 
-mongoose.connect('mongodb://localhost:27017/users_db', {
-  
+const uri = 'mongodb+srv://admin:admin@cluster0.acc1is2.mongodb.net/users_db?retryWrites=true&w=majority&appName=Cluster0';;
+
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 })
-.then(() => console.log('Conectado a MongoDB'))
-.catch((error) => console.error('Error al conectar a MongoDB:', error));
+.then(() => console.log('Conectado a MongoDB Atlas'))
+.catch((error) => console.error('Error al conectar a MongoDB Atlas:', error.message));
 
 app.use(cors({
   origin: '*', // Permite solicitudes desde esta URL
